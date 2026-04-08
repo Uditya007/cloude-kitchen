@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desi Rajasthan | Society Food Orders</title>
+  <meta
+    name="description"
+    content="Order fresh homemade Rajasthani food in your society from Desi Rajasthan."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Forum&family=Manrope:wght@400;500;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <div class="brand">
+        <img class="brand-logo" src="assets/logo.jpeg" alt="Desi Rajasthan logo">
+        <div>
+          <p class="eyebrow">Fresh Home Kitchen</p>
+          <h1>Desi Rajasthan</h1>
+        </div>
+      </div>
+      <a class="nav-cta" href="#order">Book Your Food</a>
+    </nav>
+
+    <div class="hero-content">
+      <div class="hero-copy">
+        <p class="kicker">Society Delivery Special</p>
+        <h2>Authentic Rajasthani meals, made fresh and delivered inside your society.</h2>
+        <p class="hero-text">
+          Homemade taste, quick delivery, and comforting dishes for lunch, dinner, and evening cravings.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#menu">See Menu</a>
+          <a class="secondary-btn" href="#contact">Contact Us</a>
+        </div>
+        <div class="hero-highlights">
+          <span>Pure veg options</span>
+          <span>Same-society delivery</span>
+          <span>Fresh daily cooking</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <p class="card-label">Today&apos;s Favorites</p>
+        <ul>
+          <li>Fresh Gatta Sabji</li>
+          <li>Dal Roti</li>
+          <li>Bajre Ki Roti with Lehsun Ki Chutney</li>
+        </ul>
+        <div class="delivery-chip">
+          <strong>Fast delivery</strong>
+          <span>Within your society blocks</span>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <main>
+    <section class="story-section">
+      <div class="section-heading">
+        <p class="section-tag">Why People Order</p>
+        <h3>Made for neighbors who want tasty food without stepping out.</h3>
+      </div>
+      <div class="story-grid">
+        <article>
+          <h4>Homestyle cooking</h4>
+          <p>Comforting flavors with fresh ingredients and traditional Rajasthani recipes.</p>
+        </article>
+        <article>
+          <h4>Easy booking</h4>
+          <p>Choose dishes, fill your details, and send your order in a few taps.</p>
+        </article>
+        <article>
+          <h4>Society-friendly delivery</h4>
+          <p>Perfect for families, students, and working residents inside the community.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+      <div class="section-heading">
+        <p class="section-tag">Our Menu</p>
+        <h3>Pick your favorites for today.</h3>
+      </div>
+      <div class="menu-layout">
+        <div id="menuGrid" class="menu-grid"></div>
+
+        <aside class="order-panel" id="order">
+          <div class="panel-top">
+            <p class="section-tag">Your Booking</p>
+            <h3>Cart & Checkout</h3>
+          </div>
+          <div id="cartItems" class="cart-items">
+            <p class="empty-state">No items selected yet.</p>
+          </div>
+          <div class="bill-row total-row">
+            <span>Total</span>
+            <strong id="cartTotal">Rs 0</strong>
+          </div>
+
+          <form id="orderForm" class="order-form">
+            <label>
+              Full Name
+              <input type="text" id="customerName" placeholder="Your name" required>
+            </label>
+            <label>
+              Flat / Tower
+              <input type="text" id="customerAddress" placeholder="Example: B-304" required>
+            </label>
+            <label>
+              Phone Number
+              <input type="tel" id="customerPhone" placeholder="Your mobile number" required>
+            </label>
+            <label>
+              Delivery Address
+              <input type="text" id="deliveryTime" placeholder="Flat number, tower, landmark" required>
+            </label>
+            <label>
+              Notes
+              <textarea id="customerNotes" rows="4" placeholder="Less spicy, extra chutney, gate call, etc."></textarea>
+            </label>
+            <button type="submit" class="primary-btn wide-btn" id="submitOrderBtn">Place Order</button>
+          </form>
+          <p id="orderStatus" class="status-message" aria-live="polite"></p>
+          <p class="tiny-note">
+            On Vercel, add your Telegram bot token and chat ID in the project environment variables.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="steps-section">
+      <div class="section-heading">
+        <p class="section-tag">How It Works</p>
+        <h3>Simple ordering for everyone in the society.</h3>
+      </div>
+      <div class="steps-grid">
+        <article>
+          <span>01</span>
+          <h4>Choose dishes</h4>
+          <p>Add the items and quantity you want from the menu.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h4>Fill details</h4>
+          <p>Enter your flat number, phone, and delivery address details.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h4>Instant Telegram notify</h4>
+          <p>Your order gets sent through the Telegram bot API as soon as you place it.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="contact-section" id="contact">
+    <div>
+      <p class="section-tag">Contact</p>
+      <img class="footer-logo" src="assets/logo.jpeg" alt="Desi Rajasthan logo">
+      <h3>Desi Rajasthan</h3>
+      <p>Fresh homemade food delivery inside your society.</p>
+    </div>
+    <div class="contact-list">
+      <p>Phone: +91 98765 43210</p>
+      <p>Serving: Society residents only</p>
+      <p>Hours: 12 PM - 10 PM</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
