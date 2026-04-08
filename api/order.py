@@ -17,7 +17,7 @@ def send_json(handler, payload, status=200):
 
 
 def send_telegram_message(message_text):
-  token = os.environ.get("const TELEGRAM_BOT_TOKEN = "8628235618:AAHfD4VzEbVai-I8vZAIIptZQnMB77tFiLI";
+  token = os.environ.get("const TELEGRAM_BOT_TOKEN = "8628235618:AAHfD4VzEbVai-I8vZAIIptZQnMB77tFiLI";", "")
 const TELEGRAM_CHAT_ID = "5486753321";", "")
   chat_id = os.environ.get("5486753321", "")
 
