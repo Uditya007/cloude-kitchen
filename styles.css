@@ -436,6 +436,14 @@ textarea {
   font-weight: 700;
 }
 
+.status-message[data-state="error"] {
+  color: #a12617;
+}
+
+.status-message[data-state="success"] {
+  color: #21643a;
+}
+
 .order-form label {
   display: grid;
   gap: 8px;

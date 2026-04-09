@@ -171,6 +171,11 @@ function buildOrderPayload(orderMessage) {
   };
 }
 
+function setOrderStatus(message, state = "info") {
+  orderStatus.textContent = message;
+  orderStatus.dataset.state = state;
+}
+
 document.addEventListener("click", (event) => {
   const target = event.target;
 
@@ -201,7 +206,7 @@ orderForm.addEventListener("submit", (event) => {
   }
 
   const payload = buildOrderPayload(orderMessage);
-  orderStatus.textContent = "Sending your order...";
+  setOrderStatus("Sending your order...", "info");
   submitOrderBtn.disabled = true;
   submitOrderBtn.textContent = "Sending...";
 
@@ -219,7 +224,7 @@ orderForm.addEventListener("submit", (event) => {
         throw new Error(data.error || "Could not send the order right now.");
       }
 
-      orderStatus.textContent = "Order sent successfully. You will receive confirmation soon.";
+      setOrderStatus("Order sent successfully. You will receive confirmation soon.", "success");
       orderForm.reset();
       Object.keys(cart).forEach((key) => {
         cart[key] = 0;
@@ -228,7 +233,7 @@ orderForm.addEventListener("submit", (event) => {
       renderCart();
     })
     .catch((error) => {
-      orderStatus.textContent = error.message || "Could not send the order right now.";
+      setOrderStatus(error.message || "Could not send the order right now.", "error");
     })
     .finally(() => {
       submitOrderBtn.disabled = false;
