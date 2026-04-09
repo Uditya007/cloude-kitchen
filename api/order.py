@@ -15,8 +15,8 @@ def send_json(handler, payload, status=200):
     handler.wfile.write(body)
 
 def send_telegram_message(message_text):
-    token = os.environ.get("8628235618:AAHfD4VzEbVai-I8vZAIIptZQnMB77tFiLI", "")
-    chat_id = os.environ.get("5486753321", "")
+    token = os.environ.get("TELEGRAM_BOT_TOKEN", "")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID", "")
 
     if not token or not chat_id:
         raise RuntimeError(
